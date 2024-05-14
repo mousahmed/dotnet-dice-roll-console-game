@@ -35,9 +35,11 @@ while (tries > 0)
 class DiceRollGame
 {
   readonly int _dice;
+  const int _min = 1;
+  const int _max = 6;
   public DiceRollGame()
   {
-    _dice = new Random().Next(1, 6);
+    _dice = new Random().Next(_min, _max + 1);
   }
 
   public bool IsRightGuess(int guess)
